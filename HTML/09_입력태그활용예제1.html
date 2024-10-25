@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>회원 가입 폼</title>
+  </head>
+  <body>
+    <!-- 
+    div 태그는 반드시 body 태그 안에 존재
+    h1 태그처럼 제목태그는 div 밖에 존재해도 무방
+    따로 꾸미면 됨
+    편의를 위해 한번에 묶는편인듯
+    -->
+    <div>
+      <h1>회원가입폼</h1>
+      <label>고객명:</label>
+      <input type="text" name="clientName" /> <br /><br />
+      <label>전화번호:</label>
+      <input type="tel" name="clientPhone" /> <br /><br />
+      <label>Email:</label>
+      <input type="email" name="clientEmail" /> <br /><br />
+      <label>피자선택:</label>
+      <select name="pizza">
+        <option>피자를 선택하세요</option>
+        <option>페퍼로니</option>
+        <option>콤비네이션</option>
+        <option>포테이토</option>
+        <option>고르곤졸라</option>
+      </select>
+      <fieldset>
+        <legend>피자 사이즈</legend>
+        <input type="radio" name="size" />
+        Small <br /><br />
+        <input type="radio" name="size" />
+        Medium <br /><br />
+        <input type="radio" name="size" />
+        Large
+      </fieldset>
+    </div>
+  </body>
+</html>
