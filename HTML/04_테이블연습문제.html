@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>태이블 태그 활용하기</title>
+
+    <!--
+    style 태그
+    태그에 스타일을 적용하는 방법은 크게 3가지 존재
+    1. 태그옆에 속성작성후 "" 안에 설정 style="" 인라인
+    2. style 태그 작성후 태그명 작성, {}을 사용해서 묶어주기 내부 해더 선언
+    3. 외부설정
+    
+    동일한 스타일을 각각의 태그에 적용할때
+    태그이름, 태그이름, {적용할 속성}
+
+    예제코드
+    태그1번 {
+        속성 A 설정
+    }
+
+    태그2번 {
+        속성 A 설정
+    }
+    
+    태그1번, 태그2번 {
+        속성 A 설정
+    }
+
+    background-color : 배경색상 설정
+    text-align : center 글자 가운데 정렬
+    margin : 0 auto 테이블과 같은 형태를 가로세로 동일하게 정렬
+
+
+    -->
+
+    <style>
+      table {
+        border: 1px solid black;
+        border-collapse: collapse;
+        margin: 0 auto
+      }
+   
+      th, td {
+        border: 1px solid black;
+        text-align: center;
+      }
+
+      thead {
+        background-color: lightblue;
+      }
+      tbody {
+        background-color: rgb(33, 255, 4);
+      }
+      
+    </style>
+  </head>
+  <body>
+    <h1 style="text-align: center;">상품목록</h1>
+
+    <!--
+    table 태그옆에 스타일을 작성하는방법
+    table style="border-collapse: collapse; border-color: azure; " border="1"> -->
+    <table>
+      <!-- 스타일들만 따로 묶어서 작성하는 방법 사용-->
+      <thead>
+        <tr>
+          <th>상품명</th>
+          <th>가격</th>
+          <th>재고</th>
+        </tr>
+      </thead>
+
+      <tbody>
+        <tr>
+          <th style="font-weight: lighter">노트북</th> <!-- 가운대 정렬 되긴 하는데, 스타일 일괄정렬이 더 편함-->
+          <td>1,500,000원</td>
+          <td>5대</td>
+        </tr>
+
+        <tr>
+          <td>스마트폰</td>
+          <td>900,000원</td>
+          <td>10개</td>
+        </tr>
+
+        <tr>
+          <td>태블릿</td>
+          <td>600,000</td>
+          <td>7대</td>
+        </tr>
+      </tbody>
+      <tfoot>
+        <tr>
+          <td colspan="3">총 상품수 : 3</td>
+        </tr>
+      </tfoot>
+    </table>
+  </body>
+</html>

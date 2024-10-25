@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>div와 span 이미지 활용하기</title>
+  </head>
+  <body>
+    <!--
+    금일 숙제
+    배경색 lightgreen   lightcoral-->
+    <h1 style="text-align: center">div와 img 태그 활용 예제</h1>
+
+    <div
+      style="
+        display: flex;
+        width: 1200px;
+        height: 300px;
+        border: 2px solid black;
+      "
+    >
+      <img src="flower1.jpg" alt="꽃1" width="20%" />
+      <img src="flower2.jpg" alt="꽃2" width="20%" />
+      <img src="flower3.jpg" alt="꽃3" width="20%" />
+      <img src="flower4.jpg" alt="꽃4" width="20%" />
+      <img src="flower5.jpg" alt="꽃5" width="20%" />
+    </div>
+
+    <h3>div와 span 비교하기</h3>
+
+    <div style="background-color: lightgreen">첫 번째 div 구역</div>
+    <div style="background-color: lightgreen">두 번째 div 구역</div>
+    <span style="background-color: lightcoral"> 첫 번째 span 구역 </span>
+    &nbsp;<!--띄어쓰기 모양이 보이지 않을때는 
+    &nbsp; : 공백 글자로 처리되는 표시 
+    화면 축소, 확대 비율에 따라서 span 사이의 공간이 있을 수 있음
+    -->
+    <span style="background-color: lightcoral"> 두 번째 span 구역 </span>
+  </body>
+</html>
