@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>결과 페이지</title>
+  </head>
+  <body>
+    <!-- span id="이름-결과" 로 작성한 코드 살펴보기-->
+    <h3>입력된 사용자 이름 : <span id="이름-결과"></span></h3>
+
+    <!-- JaveScript 맛보기
+    html 코드안에 JavaScript 코드를 작성하길 뭔한다면, 범위를 명시해주어야 함. 
+    
+    -->
+    <script>
+      /*
+    const = 특정 이름을 생성하고 생성된 이름에 값을 담을 수 있도록 설정
+    
+    new URL(location.href) : 현재 인터넷 페이지에서 
+    searchparams 전달하거나 전달받은 데이터 값을 전달하기 위해 설정
+    */
+      const param = new URL(location.href).searchParams;
+      const 이름결과 = document.getElementById("이름-결과");
+      /*const 이름결과 = document.getelementById("이름-결과")
+        새로운 바구니 이름 = 코딩 문서에서 찾고자 하는 ID가져오기("가져올 ID 작성하기")
+
+        이름 결과 .innerHTML =데이터 전달하기.get("유저-이름");
+        바구니 이름. 안에 널어주기 = 바구니에 전달하기 .from에서 가져온 유저-이름 : 홍길동이라는 이름을
+        
+        */
+      이름결과.innerHTML = param.get("유저-이름");
+    </script>
+    <!-- 폼태그 들어가려고 미리맛보기-->
+  </body>
+</html>
