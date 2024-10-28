@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>맛있어 치킨가게 회원가입 결과</title>
+    <style>
+        div {
+            margin: 20px auto;
+            border: 1px solid black;
+            border-radius: 15px;
+            text-align: center;
+            padding: 20px;
+        }
+        h1 {
+            color: tomato;
+        }
+
+    </style>
+</head>
+
+    <div>
+
+   
+    <h1>맛있어 치킨가게 회원가입 완료</h1>
+    <h3>이름 : <span id="name-result"></span></h3>
+    <h3>아이디 : <span id="id-result"></span></h3>
+    <h3>비밀번호 : <span id="pw-result"></span></h3>
+    <h3>이메일 : <span id="email-result"></span></h3>
+    <h3>좋아하는 치킨 : <span id="chicken-result"></span></h3>
+    </div>
+    <script>
+        const a군 = new URL(location.href).searchParams
+
+        const nameresult = document.getElementById("name-result");
+        const idresult = document.getElementById("id-result");
+        const pwresult = document.getElementById("pw-result");
+        const emailresult = document.getElementById("email-result");
+        const chickenresult = document.getElementById("chicken-result");
+
+        nameresult.innerText = a군.get("user-name");
+        idresult.innerText = a군.get("user-id");
+        pwresult.innerText = a군.get("user-pw");
+        emailresult.innerText = a군.get("user-email");
+        chickenresult.innerText = a군.get("favorite-chicken");
+
+    </script>
+</body>
+</html>
