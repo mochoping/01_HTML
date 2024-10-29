@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>선택지 2 활용하기</title>
+    <style>
+      .num-ul {
+        list-style-type: none;
+      }
+      .num-li {
+        padding: 15px;
+        background-color: lightgray;
+        border-radius: 8px;
+        font-size: 18px;
+        margin: 10px; /*<br> 대신 사용가능*/
+        cursor: pointer;
+      }
+
+      .num-li:hover {
+        background-color: lightcoral;
+        color: white;
+        transform: translate(20px);
+        transition: transform 0.7s;
+      }
+
+      .alph-ul {
+        list-style-type: none;
+      }
+      .alph-li {
+        padding: 20px;
+        margin: 10px;
+        background-color: #ddd;
+        border-radius: 8px;
+        font-size: 20px;
+        /*hover로 변경될때 속도 조절가능*/
+        transition: transform 0.7s;
+      }
+      .alph-li:hover {
+        background-color: black;
+        color: white;
+        transform: translatey(-15px);
+      }
+    </style>
+  </head>
+  <body>
+    <div class="컨테이너">
+      <h1>hover 효과가 있는 리스트</h1>
+      <ul class="num-ul">
+        <li class="num-li">리스트 항목 1</li>
+        <li class="num-li">리스트 항목 2</li>
+        <li class="num-li">리스트 항목 3</li>
+        <li class="num-li">리스트 항목 4</li>
+        <li class="num-li">리스트 항목 5</li>
+        <li class="num-li">리스트 항목 6</li>
+        <li class="num-li">리스트 항목 7</li>
+      </ul>
+
+      <ul class="alph-ul">
+        <li class="alph-li">리스트 항목 a</li>
+        <li class="alph-li">리스트 항목 b</li>
+        <li class="alph-li">리스트 항목 c</li>
+        <li class="alph-li">리스트 항목 d</li>
+        <li class="alph-li">리스트 항목 e</li>
+        <li class="alph-li">리스트 항목 f</li>
+        <li class="alph-li">리스트 항목 g</li>
+      </ul>
+    </div>
+  </body>
+</html>

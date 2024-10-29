@@ -1,0 +1,70 @@
+/*css 파일은 style 태그 내부에 작성한다 생각하고 코딩하면 됨*/
+
+/*h1 태그 글자색 orange */
+h1 {
+  color: orange;
+}
+.test-div {
+  border: 3px solid black;
+  width: 200px;
+  height: 200px;
+  background-color: lavender;
+}
+.test-div:active {
+  background-color: yellow;
+  box-shadow: 1px 1px 0 rgb(0, 0, 0, 0.5);
+  position: relative;
+  top: 2px;
+}
+/*
+.box-shadow: 1px 1px 0 rgb(0,0,0,0.5);
+position: relative;
+top:2px;*/
+.테스트-div {
+  border: 3px solid black;
+  width: 300px;
+  height: 300px;
+  background-color: #ddd;
+  text-align: center;
+  cursor: pointer;
+}
+.테스트-div:active {
+  background-color: black;
+  color: white;
+  font-size: 30px;
+  position: relative;
+  top: 2px;
+}
+.hover-box {
+  border: 3px solid black;
+  width: 200px;
+  height: 200px;
+  background-color: #ddd;
+  cursor: pointer;
+}
+
+.hover-box:hover {
+  /*
+    background-color :
+    background-image :
+    background-size : 크게 3가지 cover, 
+  
+    */
+  background-image: url("../../01_HTML/cat.jpeg");
+  background-size: cover;
+}
+.호버-박스 {
+  border: 3px dotted orange;
+  width: 200px;
+  height: 200px;
+  background-color: yellowgreen;
+  text-align: center;
+  cursor: pointer;
+}
+.호버-박스:hover {
+  font-size: 30px;
+  color: white;
+  text-align: center;
+  background-image: url("../../01_HTML/flower1.jpg");
+  background-size: cover;
+}

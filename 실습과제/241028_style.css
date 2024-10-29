@@ -1,0 +1,35 @@
+.컨테이너 {
+  width: 50%;
+  text-align: center;
+  padding: 20px;
+  border: 1px solid black;
+  border-radius: 15px;
+}
+img {
+  width: 150px;
+  border-radius: 15px;
+}
+input {
+  padding: 8px;
+}
+button {
+  background-color: lightsalmon;
+  border: none;
+  padding: 16px;
+  border-radius: 10px;
+  font-size: 20px;
+  cursor: pointer;
+}
+.join-button {
+  background-color: lightsalmon;
+  border: none;
+  padding: 16px;
+  border-radius: 10px;
+  font-size: 20px;
+  cursor: pointer;
+}
+.join-button:hover {
+  background-color: crimson;
+  color: white;
+  transform: scale(1.08);
+}
