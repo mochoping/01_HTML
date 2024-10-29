@@ -1,0 +1,48 @@
+.banner-img {
+  width: 100%;
+}
+.컨테이너 {
+  background-color: #ddd;
+  border-radius: 15px;
+}
+.재료 {
+  list-style-type: none;
+}
+.재료 li {
+  background-color: #ddd;
+  margin: 5px;
+  padding: 10px;
+  border-radius: 3px;
+  width: 30%;
+}
+.재료 li:hover {
+  background-color: aliceblue;
+}
+
+.make li {
+  font-size: 20px;
+  margin: 20px;
+  padding: 20px;
+}
+.make li:hover {
+  background-color: coral;
+  color: white;
+  padding: 20px;
+}
+.joint {
+  text-align: center;
+}
+.join-button {
+  border: 5px solid lightgreen;
+  background-color: chartreuse;
+  border-radius: 15px;
+  padding: 10px;
+  cursor: pointer;
+  font-weight: bold;
+}
+.join-button:hover {
+  background-color: rgb(0, 0, 0);
+  color: white;
+  font-weight: bold;
+  border: 5px solid lightgrey;
+}
