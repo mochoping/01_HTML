@@ -1,0 +1,44 @@
+div {
+  width: 200px;
+  height: 200px;
+  border: 2px solid black;
+}
+.A {
+  padding: 20px; /*모두 20 px 설정*/
+  background-color: red;
+}
+.B {
+  padding: 20px 60px; /*상하 20  좌우 60 */
+}
+.C {
+  padding: 10px 30px 100px; /*상 좌우 하*/
+  background-color: yellow;
+}
+.D {
+  padding: 10px 20px 30px 40px; /*상 우 하 좌 시계방향 */
+}
+
+.box {
+  width: 100px;
+  height: 100px;
+  background-color: aquamarine;
+  /*
+        padding-top: 10px;
+        padding-bottom: 20px;
+        padding-left: 5px;
+        padding-right: 15px;
+*/
+  padding: 10px 15px 20px 5px;
+  /*
+        margin-top: 30px;
+        margin-bottom: 100px;
+        margin-left: 50px;
+        margin-right: 300px;
+*/
+  margin: 30px 300px 100px 50px;
+
+  border-top: 5px solid red;
+  border-bottom: 3px dotted black;
+  border-left: 10px double orange;
+  border-right: 3px dashed purple;
+}

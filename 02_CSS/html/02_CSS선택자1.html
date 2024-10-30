@@ -4,34 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>CSS 선택자 1</title>
-    <style>
-      h1 {
-        color: orange;
-      }
-      strong {
-        font-size: 18px;
-        font-family: "궁서체";
-        /*font-family 인 이유 : 첫번째로 선택한 글꼴이 없을경우
-                                두번째로 넣어둔 글꼴을 자동으로 선택
-                                기본적으로 3개는 제공
-                                , 으로 구분해서 작성
-                                종료시에는 ; 로 종료
-                                */
-        color: steelblue;
-      }
-      code {
-        /*배경색*/
-        background-color: lightcoral;
-        /* 배치방식. 웹페이지에서 차지하는 공간과 위치방식 결정
-        block: 항상 새줄에서 시작. 가로너비를 모두 차지하려고 함
-        width: 100% 처럼 동작
-        가로폭이 화면 전체. 나란히 배치되지 않음
-        태그중에서 div, h1~h6, p태그는 기본적으로 블록 설정 되어있음.
-        */
-        display: block;
-        font-weight: bold;
-      }
-    </style>
+    <link rel="stylesheet" href="../css/02_CSS선택자1.css" />
   </head>
   <body>
     <h1>CSS 선택자 1</h1>
@@ -62,17 +35,7 @@
             </code>
 
         </pre>
-      <style>
-        #선택1번 {
-          background-color: yellowgreen;
-        }
-        #선택2번 {
-          background-color: blue;
-        }
-        #선택3번 {
-          background-color: lightcoral;
-        }
-      </style>
+
       <!--id 활용해서 부분적으로 디자인 설정하기-->
       <ol>
         <li id="선택1번">id 선택자 테스트 1</li>
@@ -92,17 +55,7 @@
 
         </pre
       >
-      <style>
-        /*css 는 class로 쓰는게 약간의 약속*/
-        .테스트1 {
-          background-color: black;
-          color: white;
-        }
 
-        .테스트2 {
-          background-color: pink;
-        }
-      </style>
       <p class="테스트1">class 선택자 테스트</p>
       <p class="테스트2">class 선택자 테스트</p>
       <p>class 선택자 테스트</p>
@@ -113,14 +66,7 @@
       <hr />
       <hr />
       <hr />
-      <style>
-        .test1 {
-          background-color: orange;
-        }
-        .test2 {
-          font-size: 30px;
-        }
-      </style>
+
       <!-- 단축키
           ctrl + x 
           ctrl + z

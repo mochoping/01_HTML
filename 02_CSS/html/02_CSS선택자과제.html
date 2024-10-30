@@ -10,7 +10,7 @@
         display: flex;
         gap: 20px;
       }
-      .list1 {
+      .image-list li {
         width: 150px;
         height: 150px;
         background-color: #ddd;
@@ -19,23 +19,150 @@
         font-size: 36px;
         cursor: pointer;
       }
-      .list1:hover {
+      .image-list li:hover {
         color: white;
         font-size: 0; /*글자지우는트릭*/
         background-size: cover;
         background-position: center;
+      }
+      .list1:hover {
         background-image: url("../../01_HTML/flower1.jpg");
+      }
+      .list2:hover {
+        background-image: url("../../01_HTML/flower2.jpg");
+      }
+      .list3:hover {
+        background-image: url("../../01_HTML/flower3.jpg");
+      }
+      .list4:hover {
+        background-image: url("../../01_HTML/flower4.jpg");
+      }
+      .list5:hover {
+        background-image: url("../../01_HTML/flower5.jpg");
+      }
+      .image-상하list {
+        list-style-type: none;
+        gap: 30px; /*갭이 적용 안되는 이유가 궁금합니다.*/
+      }
+      상자1 {
+        margin: 0 auto;
+      }
+      .이미지1 {
+        padding: 30px;
+        margin: 10px;
+        font-weight: bold;
+        font-size: 30;
+        width: 400px;
+        text-align: center;
+        background-size: cover;
+        background-position: center;
+        background-image: url("../../01_HTML/flower1.jpg");
+        border-radius: 25px;
+      }
+      .이미지1:hover {
+        width: 100%;
+        height: 500px;
+        background-size: cover;
+        background-position: center;
+        background-image: url("../../01_HTML/flower1.jpg");
+      }
+      .이미지2 {
+        padding: 30px;
+        margin: 10px;
+        font-weight: bold;
+        font-size: 30;
+        width: 400px;
+        text-align: center;
+        background-size: cover;
+        background-position: center;
+        background-image: url("../../01_HTML/flower2.jpg");
+        border-radius: 25px;
+      }
+      .이미지2:hover {
+        width: 100%;
+        height: 500px;
+        background-size: cover;
+        background-position: center;
+        background-image: url("../../01_HTML/flower2.jpg");
+      }
+      .이미지3 {
+        padding: 30px;
+        margin: 10px;
+        font-weight: bold;
+        font-size: 30;
+        width: 400px;
+        text-align: center;
+        background-size: cover;
+        background-position: center;
+        background-image: url("../../01_HTML/flower3.jpg");
+        border-radius: 25px;
+      }
+      .이미지3:hover {
+        width: 100%;
+        height: 500px;
+        background-size: cover;
+        background-position: center;
+        background-image: url("../../01_HTML/flower3.jpg");
+      }
+      .이미지4 {
+        padding: 30px;
+        margin: 10px;
+        font-weight: bold;
+        font-size: 30;
+        width: 400px;
+        text-align: center;
+        background-size: cover;
+        background-position: center;
+        background-image: url("../../01_HTML/flower4.jpg");
+        border-radius: 25px;
+      }
+      .이미지4:hover {
+        width: 100%;
+        height: 500px;
+        background-size: cover;
+        background-position: center;
+        background-image: url("../../01_HTML/flower4.jpg");
+      }
+      .이미지5 {
+        padding: 30px;
+        margin: 10px;
+        font-weight: bold;
+        font-size: 30;
+        width: 400px;
+        text-align: center;
+        background-size: cover;
+        background-position: center;
+        background-image: url("../../01_HTML/flower5.jpg");
+        border-radius: 25px;
+      }
+      .이미지5:hover {
+        width: 100%;
+        height: 500px;
+        background-size: cover;
+        background-position: center;
+        background-image: url("../../01_HTML/flower5.jpg");
       }
     </style>
   </head>
   <body>
-    <h1>Hover 시 이미지가 보이는 리스트</h1>
-    <ul class="image-list">
-      <li class="list1">이미지 1</li>
-      <li class="list2">이미지 2</li>
-      <li class="list3">이미지 3</li>
-      <li class="list4">이미지 4</li>
-      <li class="list5">이미지 5</li>
-    </ul>
+    <div>
+      <h1>Hover 시 이미지가 보이는 리스트</h1>
+      <ul class="image-list">
+        <li class="list1">이미지 1</li>
+        <li class="list2">이미지 2</li>
+        <li class="list3">이미지 3</li>
+        <li class="list4">이미지 4</li>
+        <li class="list5">이미지 5</li>
+      </ul>
+      <div class="상자1">
+        <ul class="image-상하list">
+          <li class="이미지1">이미지 1</li>
+          <li class="이미지2">이미지 2</li>
+          <li class="이미지3">이미지 3</li>
+          <li class="이미지4">이미지 4</li>
+          <li class="이미지5">이미지 5</li>
+        </ul>
+      </div>
+    </div>
   </body>
 </html>
