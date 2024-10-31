@@ -18,9 +18,33 @@ h1 {
 .main {
   padding: 20px;
 }
+.thema {
+  text-align: center; /*text-align 안될때 , display : inline-block; 
+  a 나 image 같은 태그에 직접 적으로 작성.
+  a태그는 가로에서 부분적으로 차지하는 요소라 그렇다.
+  */
+}
+a {
+  text-decoration: none;
+  background-color: #333;
+  color: orange;
+  padding: 12px 24px;
+  border-radius: 8px;
+  box-shadow: 0 20px 50px rgba(255, 145, 0, 0.4);
+  transition: 0.6;
+} /*링크 밑줄 제거
+  버튼패딩 보통 상하 좌우 ← 상하 2배
+  */
+a:hover {
+  background-color: white;
+  box-shadow: 0 2px 5px white;
+  color: #333;
+  transition: 0.6;
+}
 .infomation1,
 .gallery,
 .gallery2 {
+  margin-top: 30px;
   margin-bottom: 30px;
   background-color: #333;
   color: #f5f5f5;
