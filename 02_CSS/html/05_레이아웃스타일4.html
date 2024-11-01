@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>레이아웃 스타일 4</title>
+  </head>
+  <body>
+    <h1>position</h1>
+    <pre>
+        요소 배치(위치) 관련 스타일
+        위치를 지정하는 속성
+       - relative(상대적인)
+            지정된 요소 내부에 다른요소가 상대적인 위치를 지정할 수 있도록 
+            기준이 되게 만드는 속성
+       - absolute(절대적인)
+            기본 요소 배치 순서를 무시하고 지정된 절대위치에 요소를 배치 
+            z-index : 정수 가장 우선으로 보여지는 디자인
+
+            z-index : 정수
+            가장 우선으로 보여지는 디자인 순서를 지정
+            숫자가 클수록 먼져보임
+            단독으로도 쓸때가 있음
+            최대 최소는 지정된 숫자 없음
+            32비트 정수형
+
+       - fixed (고정된)<!---->
+            항상 고정된 위치에 요소를 배치함
+            (화면 움직임과 무관)
+       - stiky
+            원래 요소가 보여지는 화면이라면 position X
+            요소가 보여지는 화면을 벗어나면 fixed(고정)
+
+
+    </pre>
+    <h3>position:fixed</h3>
+
+    <style>
+      .container {
+        width: 300px;
+        height: 300px;
+        border: 1px solid #333;
+        position: relative;
+      }
+      .box1,
+      .box2,
+      .box3 {
+        position: absolute;
+        width: 150px;
+        height: 150px;
+      }
+      .box1 {
+        background-color: lightcoral;
+        z-index: 1;
+        top: 50px;
+        left: 50px;
+      }
+      .box2 {
+        background-color: lightgreen;
+        z-index: 2;
+        top: 100px;
+        left: 100px;
+      }
+      .box3 {
+        background-color: lightblue;
+        z-index: 3;
+        top: 150px;
+        left: 150px;
+      }
+    </style>
+    <div class="container">
+      <div class="box1">box</div>
+      <div class="box2">box</div>
+      <div class="box3">box</div>
+    </div>
+  </body>
+</html>

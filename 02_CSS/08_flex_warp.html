@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>flex wrap</title>
+    <style>
+      .container {
+        display: flex;
+        flex-wrap: wrap;
+        /*jcs 가 자동설정*/
+      }
+    </style>
+  </head>
+  <body>
+    <h1>flex flex-wrap 활용하기</h1>
+    \
+    <pre>
+        display : flex 가로로 정렬 기존에 있던 
+
+        flex-wrap: 컨테이너 안에 있는 여러아이템이 여러줄을 먹도록 함
+
+        반응형 디자인
+        반응형이란? 화면에서 화면의 가로 크기에 따라 사용자에게 거부감 없는 디자인을
+                   제공하는것
+
+
+
+    </pre>
+    <h3>display:flex 와 flex-warp:warp</h3>
+    <div class="container;">
+      <div style="background-color: lightcoral">1</div>
+      <div style="background-color: lightblue">2</div>
+      <div style="background-color: lightgreen">3</div>
+      <div style="background-color: lightpink">4</div>
+      <div style="background-color: lightyellow">5</div>
+    </div>
+    <style>
+      .container2 {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 15px;
+        padding: 20px;
+        background-color: #ddd;
+      }
+      .container2 div {
+        padding: 20px;
+        width: 100px;
+        text-align: center;
+        border-radius: 5px;
+      }
+    </style>
+    <h3>display:flex와 flex-wrap:wrap justify-content 활용하기</h3>
+    <div class="container2;">
+      <div style="background-color: lightcoral">1</div>
+      <div style="background-color: lightblue">2</div>
+      <div style="background-color: lightgreen">3</div>
+      <div style="background-color: lightpink">4</div>
+      <div style="background-color: lightyellow">5</div>
+    </div>
+  </body>
+</html>
