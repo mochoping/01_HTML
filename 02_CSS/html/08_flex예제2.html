@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>justify-content 활용해보기</title>
+    <style>
+      .container {
+        display: flex;
+        width: 80%;
+        padding: 10px;
+        border: 1px solid #ccc;
+      }
+
+      .box {
+        padding: 10px;
+        background-color: aqua;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>justify-content 활용해보기</h1>
+    <p>주의사항 : justify-content 스타일은 우선순위 2 스타일로 적용</p>
+    <hr />
+    <hr />
+
+    <h2>모든 요소 왼쪽</h2>
+    <div class="container" style="justify-content: left">
+      <div class="box">1</div>
+      <div class="box">2</div>
+      <div class="box">3</div>
+    </div>
+    <hr />
+    <h2>모든 요소 오른쪽</h2>
+    <div class="container" style="justify-content: right">
+      <div class="box">1</div>
+      <div class="box">2</div>
+      <div class="box">3</div>
+    </div>
+    <hr />
+    <h2>모든 요소 중앙</h2>
+    <div class="container" style="justify-content: center">
+      <div class="box">1</div>
+      <div class="box">2</div>
+      <div class="box">3</div>
+    </div>
+    <hr />
+    <h2>각 요소 사이에 동일간격, 양끝 반간격</h2>
+    <div class="container" style="justify-content: space-around">
+      <div class="box">1</div>
+      <div class="box">2</div>
+      <div class="box">3</div>
+    </div>
+    <hr />
+    <h2>각 요소 사이에 동일간격, 양끝 동간격</h2>
+    <div class="container" style="justify-content: space-evenly">
+      <div class="box">1</div>
+      <div class="box">2</div>
+      <div class="box">3</div>
+    </div>
+    <hr />
+    <h2>각 요소 사이에 동일간격, 양끝간격없음</h2>
+    <div class="container" style="justify-content: space-between">
+      <div class="box">1</div>
+      <div class="box">2</div>
+      <div class="box">3</div>
+    </div>
+    <hr />
+  </body>
+</html>

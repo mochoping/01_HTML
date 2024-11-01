@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>display 속성</title>
+  </head>
+  <body>
+    <h1>display 속성</h1>
+    <pre>
+        display 속성 HTML 요소의 배치 방식을 설정하는 중요한 CSS 속성
+        display 주요 값으로
+            [block, inline , inline-block, flex, grid, inline-flex]
+        모든 태그에는 display가 각 속성에 맞게 기본설정이 되어있음
+        display : block = div, h1~h6 , p 등이 대표적으로 block 설정 되어있음
+                    예 - h1 태그를 만들 때 : display:block
+                                            font-weight:bold 
+                                            font-size:32px
+                         모든 태그에는 각 css가 기본으로 설정되어있음
+        display : inline = span, a, strong 등 대표적으로 inline 설정으로 존재
+                    예 - span :display:inline
+                               font-size:16px 
+                               color:black
+        기본적으로 부여된 속성을 변경하길 원할경우 CSS 를 이용하여 디자인 변화를 주는 것
+        
+        display : inline-block = inline 처럼 한줄에 표시됨
+                                 image , button 태그가 inline-block 설정
+
+        
+    </pre>
+    <h3>display : flex</h3>
+    <pre>
+    flex 요소는 내부 항목들이 수평 또는 수직으로 유연하게 정렬
+    inline 과 flex 차이
+    inline = 가로세로 조정 안됨
+    flex   = 자유로운 조정 가능
+    </pre>
+    <div style="display: flex">
+      <div style="background-color: lightpink; padding: 20px">Flex Item 1</div>
+      <div style="background-color: lightyellow; padding: 20px">
+        Flex Item 2
+      </div>
+      <div style="background-color: lightskyblue; padding: 20px">
+        Flex Item 3
+      </div>
+    </div>
+    <h3>display : grid</h3>
+    <pre>
+        행과 열로 내부 항목 정렬
+        주로 이미지나 윕툰처럼 틀과 형식으로 규칙적인 정렬이 필려요 할때 많이 사용
+
+        grid-template-columns: 1fr 1fr;
+        fr : faction
+        그리드 내에서 사용 가능한 공간을 비율로 나누는 단위
+        1fr : 그리드의 사용 가능한 공간을 같은 비율로 나눠서 차지하라는 의미
+
+        gap: 10px;
+        간격 추가
+
+    </pre>
+    <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 10px">
+      <!-- 가로의 간격을 주는것 가능. 
+         1fr : fraction(부분,일부)-->
+      <div style="background-color: lightpink; padding: 20px">Grid Item 1</div>
+      <div style="background-color: lightyellow; padding: 20px">
+        Grid Item 2
+      </div>
+      <div style="background-color: lightskyblue; padding: 20px">
+        Grid Item 3
+      </div>
+    </div>
+    <!-- 그리드 활용해서 가로로 3개열 만들어보기 GAP 30 
+     
+    -->
+    <div style="display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 30px">
+      <div style="background-color: lightgreen; padding: 20px">Grid Item 1</div>
+      <div style="background-color: lightblue; padding: 20px">Grid Item 2</div>
+      <div style="background-color: lightpink; padding: 20px">Grid Item 3</div>
+    </div>
+  </body>
+</html>

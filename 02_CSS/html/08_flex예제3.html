@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>justify-content 활용해서 이미지 정렬</title>
+    <style>
+      .container {
+        display: flex;
+        width: 90%;
+        margin: 20px auto;
+        border: 1px solid #ccc;
+        padding: 10px;
+      }
+      .container img {
+        width: 100px;
+        height: 100px;
+      }
+      div img:hover {
+        /*display: none;*/
+        visibility: hidden;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>justify-content 활용해서 이미지 정렬</h1>
+    <div class="container" style="justify-content: space-between">
+      <img src="../../01_HTML/flower2.jpg" />
+      <img src="../../01_HTML/flower3.jpg" />
+      <img src="../../01_HTML/flower4.jpg" />
+      <!-- flower 2 3 4 -->
+    </div>
+    <div class="container" style="justify-content: space-around">
+      <img src="../img/pumpkin.jpg" />
+      <img src="../img/skull.jpg" />
+      <img src="../img/web.jpg" />
+      <!-- pumpkin skull web -->
+    </div>
+    <div class="container" style="justify-content: space-evenly">
+      <img src="../../01_HTML/flower1.jpg" />
+      <img src="../img/ghost.jpg" />
+      <img src="../../01_HTML/flower1.jpg" />
+      <!-- flower 1  ghost flower 5-->
+    </div>
+  </body>
+</html>

@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CSS 선택자 우선순위</title>
+  </head>
+  <body>
+    <h1>CSS 스타일 선택자 우선순위</h1>
+    <pre>
+        기본적으로 CSS속성은 style 태그 또는 CSS 파인의 작성된 순서
+        위에서 아래로 해석이 진행되지만,
+
+        같은 요소에 여러 CSS 속성이 설정되는 경우 우선순위에 따라 적용
+
+        *알아둬야 할 것
+        1. 동일한 우선 순위로 CSS 속성이 설정된 경우
+        - 가장 마지막에 작성된 CSS 속성 반영
+        2. 여러 선택지를 이용해서 같은 요소를 선택하더라도
+        지정되는 CSS 속성이 다르면 모두 반영됨
+        3. 태그와 style 이 가까이 위치할 수록 우선순위가 적용
+        4. 스타일 .CSS 파일과 태그안에 작성한 CSS는 동일한 우선순위가 있으나, 가장 마지막에 
+        작성된 스타일 적용
+
+        예제1
+            <link rel="stylesheet" href="스타일.css">
+            <style>
+                /*css설정값 작성*/
+            </style>
+            마지막에 작성된 태그가 적용
+        예제2
+        
+        <style>
+            /*css설정값 작성*/
+        </style>
+        <link rel="stylesheet" href="스타일.css">
+        마지막에 링크괸 CSS 파일 적용
+
+    1순위 : CSS속성 : 속성값! important;
+    2순위 : inline-style , 태그 옆에 직접적으로 작성한 스타일은, 엄청
+    중요한 이유가 있을 것이야
+    3순위 : # 아이디 속성명
+    4순위 : . 클래스
+    5순위 : 태그 이름
+        <style>
+            h3{/*5순위*/
+            background-color: red;
+            }
+        </style>
+
+    </pre>
+  </body>
+</html>
