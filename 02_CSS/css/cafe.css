@@ -1,0 +1,68 @@
+/* css 의 경우 대부분 하나의 css 파일에서 작업을 진행 
+html 파일이나 div 로 묶은 css 스타일이 변경될 때 마다 주석으로 어떤 css 스타일인지 표기를 작성해주는것이 예의*/
+/*************** main page css *****************/
+body {
+  margin: 0;
+  padding: 0;
+}
+.banner {
+  background-color: #8b4513;
+  color: white;
+  padding: 60px 0px;
+  text-align: center;
+  font-size: 40px;
+  font-weight: bold;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+.nav {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  display: flex;
+  justify-content: space-around;
+  background-color: #3e2723;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+.nav a {
+  display: block;
+  color: white;
+  padding: 14px 20px;
+  text-decoration: none;
+  font-weight: bold;
+  transition: background-color 0.3s linear;
+}
+.nav a:hover {
+  background-color: #5d4037;
+}
+/*메뉴 이외 소개 연락하기라는 섹션
+공통 스타일을 묶어서 디자인 후 적용*/
+.content {
+  margin: 50px;
+  padding: 20px;
+  border-radius: 8px;
+  background-color: #f0f0f0;
+}
+/*메뉴 스타일 */
+.menu {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+}
+.menu-item {
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 8px;
+  text-align: center;
+}
+.menu-item h2 {
+  font-size: 24px;
+  margin-bottom: 10px;
+}
+.menu-item span {
+  /*span은 display=block을 주지 않은한 가로 세로 크기를 조절 불가능함
+  16px = 1em 글자 하나의 크기. 반응형 크기
+  */
+  font-size: 1.5em;
+  margin-right: 8px;
+}

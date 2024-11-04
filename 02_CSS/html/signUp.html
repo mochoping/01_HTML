@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>카페 베네 회원가입</title>
+    <link rel="stylesheet" href="../css/cafe.css" />
+    <style>
+      /*************** singUp.html *****************/
+      .signUp-container {
+        width: 400px;
+        margin: 50px auto;
+        background-color: #f0f0f0;
+        padding: 20px;
+        border-radius: 8px;
+      }
+      .signUp-container h2 {
+        text-align: center;
+      }
+      /* label 에서 프로필 사진 선택하기 라벨은 아래 작성한 스타일로 덮어짐. */
+      label {
+        display: block;
+        font-weight: bold;
+        margin-top: 10px;
+        color: #333;
+      }
+      input[type="text"],
+      input[type="email"],
+      input[type="password"] {
+        width: 80%;
+        padding: 10px;
+        margin-top: 5px;
+        margin-bottom: 15px;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+        font-size: 16px;
+      }
+      input[type="checkbox"],
+      input[type="radio"] {
+        margin-right: 10px;
+        margin-bottom: 15px;
+      }
+      button {
+        width: 100%;
+        padding: 10px;
+        font-size: 20px;
+        cursor: pointer;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+      }
+      button:hover {
+        background-color: #333;
+        color: white;
+      }
+    </style>
+  </head>
+  <body>
+    <!--배너-->
+    <div class="banner">카페에 오신것을 환영합니다. &#x2615;</div>
+    <!-- 네비게이션 -->
+    <ul class="nav">
+      <li><a href="#">HOME</a></li>
+      <li><a href="#">메뉴</a></li>
+      <li><a href="#">소개</a></li>
+      <li><a href="#">연락하기</a></li>
+      <li><a href="signUp.html">회원가입하기</a></li>
+    </ul>
+
+    <!--회원가입 폼-->
+    <div class="signUp-container">
+      <h2>회원가입</h2>
+      <form action="회원가입성공.html">
+        <label for="user-name">이름</label>
+        <input type="text" id="user-name" name="user-naameme" />
+        <!--for id속성명을  for는 input 창을 누르지 않ㅇ고 label에 표기된 이름을 클릭해도 input 창에 키보드 커서가 갈 수 있도록 설정하는 공간
+ㅑㅜㅏㅏㅏ-->
+        <label for="user-email">이메일</label>
+        <input type="email" id="user-email" name="user-n" />
+
+        <label for="user-pw">비밀번호</label>
+        <input type="text" id="user-name" name="user-name" />
+
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <!--labe for 를 사용하는 대표적인 예-->
+        <style>
+          /*class . id #*/
+          /*프로필 사진 선택했을때 사진이 보이기위해서는 자바스크립트로 설정*/
+          #user-profile {
+            display: none; /*글자 클릭시 파일선택 창 나옴*/
+          }
+          /* label[for="id속성명"] css스타일 작성하기 */
+          label[for="user-profile"] {
+            padding: 10px;
+            background-color: #f5f5f5;
+            border: 1px solid #ccc;
+            cursor: pointer;
+          }
+        </style>
+        <label for="user-profile">프로필 사진 선택하기</label>
+        <input type="file" id="user-profile" name="user-profile" />
+        <br /><br /><br />
+        <!-- 취미 특기 체크박스
+          체크박스 : 모두 선택을 안하거나 모두선택하거나 다중 선택 가능
+          name으로 같은 분류 묶어줌
+          -->
+        <label>취미/특기</label><br />
+        <input type="checkbox" name="hobby" />음악
+        <input type="checkbox" name="hobby" />운동
+        <input type="checkbox" name="hobby" />독서
+        <input type="checkbox" name="hobby" />요리
+        <br />
+        <br />
+        <!--수신동의 라디오 버튼-->
+        <label>수신동의 여부</label><br />
+        <input type="radio" name="subscription" />예
+        <input type="radio" name="subscription" />아니오 <br /><br />
+        <button>가입하기</button>
+      </form>
+    </div>
+  </body>
+</html>
