@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>회원가입</title>
-    <link rel="stylesheet" href="../../실습과제/12_속성사용회원가입.css" />
+    <link rel="stylesheet" href="../css/12_속성사용회원가입.css" />
   </head>
   <body>
     <h1>회원가입하기</h1>
@@ -28,9 +28,10 @@
         <label>비밀번호</label>
         <input type="password" placeholder="******" />
 
-        <label>프로필 사진 선택</label>
-        <input type="file" id="profile" name="profile" />
-
+        <label class="profileButton"
+          >프로필 사진 선택
+          <input type="file" id="profile" name="profile" />
+        </label>
         <label>취미</label>
         <input type="checkbox" />음악 <input type="checkbox" />운동
         <input type="checkbox" />여행 <input type="checkbox" />독서

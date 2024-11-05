@@ -55,7 +55,8 @@ h1 {
 }
 input[type="text"],
 input[type="email"],
-input[type="password"] {
+input[type="password"],
+.profileButton {
   width: 100%;
   padding: 10px;
   margin-bottom: 15px;
@@ -63,14 +64,13 @@ input[type="password"] {
   border-radius: 4px;
   font-size: 14px;
 }
+.profileButton:hover {
+  background-color: #4a90e2;
+  color: white;
+  cursor: pointer;
+}
 #profile {
   visibility: hidden;
-}
-label[for="profile"] {
-  padding: 10px;
-  background-color: #f5f5f5;
-  border: 1px solid #ccc;
-  cursor: pointer;
 }
 input[type="radio"],
 input[type="checkbox"] {
