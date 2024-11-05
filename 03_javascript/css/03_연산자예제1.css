@@ -31,3 +31,7 @@ button:hover {
   background-color: #333;
   color: white;
 }
+#calcResult {
+  color: crimson;
+  font-size: 30px;
+}
