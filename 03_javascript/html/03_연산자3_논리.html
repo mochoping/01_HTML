@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>논리연산자(&&, ||, !)</title>
+</head>
+<body>
+    <h1>논리연산자(&&, ||, !)</h1>
+    <h3>and 연산자 (a && b)</h3>
+    <pre>
+        
+        a b 모두 true 일 경우에만 true 반환
+        주로사용처 로그인
+    </pre>
+
+    <hr>
+
+    <h3>로그인 하기</h3>
+    <pre>
+        -서버 저장된 아이디 : 'member01'
+        -서버 저장된 비밀번호: 'pass01'
+        둘다 일치시 로그인 성공을 alert("로그인성공")
+        하나라도 일치하지 않으면 
+        alert("아이디 또는 비밀번호가 일치하지 않습니다.")
+
+    </pre>
+    <div>
+        ID : <input type="text" id="inputId"> <br>
+        ID : <input type="password" id="inputPw"> <br>
+        <button onclick="login()">로그인</button>
+    </div>
+
+</div>
+<hr>
+<h3>or 연산자(||)</h3>
+<pre>
+    둘중 하나만 참이어도 참으로 인정
+
+    주 사용처 핸드폰/전화번호 작성확인시 
+</pre>
+<style>
+    #msg {
+        color: red;
+        display: none; /*초기에는 숨김 */
+
+    }
+
+</style>
+<div>
+    <h4>전화번호 입력</h4>
+    휴대폰번호: <input type="text" id="phone"><br>
+    일반전화번호: <input type="text" id="tel"><br>
+    <button onclick="checkNumber()">확인</button>
+     <p id="msg">전화번호나 휴대폰 번호를 입력해주세요</p>
+
+
+</div>
+
+
+    <script src="../js/03_연산자3_논리.js"></script>
+</body>
+</html>

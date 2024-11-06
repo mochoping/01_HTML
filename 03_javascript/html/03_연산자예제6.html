@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>비밀번호 & 비밀번호 확인 일치여부</title>
+</head>
+<body>
+    <h1>비밀번호 & 비밀번호 확인 일치여부</h1>
+    <div class="container">
+        <label>비밀번호 :  </label>
+        <input type="text" id="inputPW">
+        <br>
+        <label>비밀번호 확인 : </label>
+        <input type="text" id="inputPWConfirm">
+        <br>
+        <button onclick="checkPw()">비밀번호 일치여부 확인</button>
+        
+    </div>
+    <hr>
+    <h3>or 연산자(||)</h3>
+    <pre>
+        둘중 하나만 참이어도 참으로 인정
+
+        주 사용처 핸드폰/전화번호 작성확인시 
+    </pre>
+    <style>
+        #msg {
+            color: red;
+            display: none; /*초기에는 숨김 */
+
+        }
+
+    </style>
+    <div>
+        <h4>전화번호 입력</h4>
+        휴대폰번호: <input type="text" id="phone"><br>
+        일반전화번호: <input type="text" id="tel"><br>
+        <button onclick="checkNumber()">확인</button>
+         <p id="msg">전화번호나 휴대폰 번호를 입력해주세요</p>
+
+
+    </div>
+
+    <script src="../js/03_연산자예제6.js"></script>
+</body>
+</html>
