@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>입출금사이트</title>
+    <style>
+      .account {
+        width: 500px;
+        padding: 20px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        text-align: center;
+      }
+      .row {
+        margin-bottom: 20px;
+      }
+      h1 {
+        font-size: 30px;
+      }
+      input {
+        border-radius: 10px;
+        border: 1px solid #ddd;
+        font-size: 20px;
+        padding: 15px;
+      }
+      button {
+        padding: 10px 20px;
+        border: none;
+        font-size: 25px;
+        cursor: pointer;
+      }
+      .입금btn:hover {
+        background-color: yellowgreen;
+        color: white;
+      }
+      .출금btn:hover {
+        background-color: orangered;
+        color: white;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="account">
+      <div class="row">
+        <h1>잔액 : <span id="output"></span> 원</h1>
+      </div>
+      <div class="row">
+        <label for="amount">금액 : </label>
+        <input type="text" id="amount" />
+        <span>원</span>
+      </div>
+
+      <div class="row">
+        <button class="출금btn" onclick="출금가능()">출금</button>
+        <button class="입금btn" onclick="입금가능()">입금</button>
+      </div>
+    </div>
+    <script>
+      const output = document.getElementById("output"); //보여지는 금액
+      const amount = document.getElementById("amount"); //입력되는 금액
+
+      // 잔액 설정
+      let balance = 10000; // 초기 잔액
+      output.innerText = balance; //초기금액설정
+
+      function 출금가능() {
+        const 비밀번호확인 = prompt("비밀번호를 입력하세요");
+        const pw = "1234!";
+        let input = amount.value;
+        if (input == 0) {
+          alert("금액을 입력해주세요");
+        } else if (input > balance) {
+          alert("잔액이 부족하여 출금할 수 없습니다.");
+          amount.value = "";
+        } else if (비밀번호확인 == pw) {
+          balance -= Number(amount.value);
+          output.innerText = balance;
+          amount.value = "";
+          alert("출금이 완료되었습니다.");
+        } else {
+          alert("비밀번호가 일치하지 않습니다.");
+        }
+      }
+      function 입금가능() {
+        balance += Number(amount.value);
+        output.innerText = balance;
+        amount.value = ""; //입력창 리셋 트릭
+      }
+    </script>
+  </body>
+</html>

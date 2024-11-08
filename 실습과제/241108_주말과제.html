@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>입출금 UI</title>
+    <style>
+      .container {
+        width: 500px;
+        border: 3px solid #333;
+        border-radius: 10px;
+      }
+      .window {
+        display: flex;
+        justify-content: space-around;
+        text-align: center;
+        padding: 20px;
+        border-bottom: 2px solid #333;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="window">
+        <div class="dp">잔액 :</div>
+        <div class="dp" id="output"></div>
+        <div class="dp">원</div>
+      </div>
+      <div class="window2">
+        <label>금액 : </label>
+        <input type="text" id="amount" />
+        <span> 원</span>
+      </div>
+      <button class="inBtn" onclick="입금()">입금</button>
+      <button class="outBtn" onclick="출금()">출금</button>
+    </div>
+  </body>
+</html>
