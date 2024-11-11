@@ -36,7 +36,7 @@
     <input type="number" id="input1" />
     <button onclick="check()">확인하기</button>
     <hr />
-    <h3>if(만약에) - delse(아니면) 문</h3>
+    <h3>if(만약에) - else(아니면) 문</h3>
     <pre>
       <code>
         if(조건식) {
@@ -48,7 +48,7 @@
         * else항목에는 조건식을 작성하지 않음
 
         삼항연산자
-        if 조건식          true      esle      false
+        if 조건식          true      else      false
         (             ) ?             :               ;
     
       </code>
@@ -62,7 +62,7 @@
     <pre>
       <code>
         if(조건식a) {
-          조건식이 ture 인 경우 실행;
+          조건식이 true 인 경우 실행;
         } else if (조건식b){
           조건식a false 이면서 b가 true 인 경우
         } else {
@@ -76,6 +76,31 @@
 
 
 
+    </pre>
+    <h1>switch문</h1>
+    <h3>switch, case, default문</h3>
+    <pre>
+      switch 문
+      - 식 하나의 결과로 많은 경우의 수를 처리할 때 사용하는 조건문
+
+      <code>
+          switch(식) {//식의 결과는 정수 또는 문자열
+            case 결과1:
+              결과1일 때 수행 코드;
+              break; 결과 1일때 멈추기
+            case 결과2:
+              결과2일 때 수행 코드;
+              break; 결과 2일때 멈추기
+            case 결과3:
+              결과3일 때 수행 코드;
+              break; 결과 3일때 멈추기
+            ...
+            default:
+              위 모든 케이스에 만족하지 못할 때 수행할 코드
+              (if문의 else와 같음)
+          }
+      </code>
+        
     </pre>
 
     <script src="../js/06_조건문.js"></script>
