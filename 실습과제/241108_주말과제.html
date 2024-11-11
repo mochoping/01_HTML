@@ -9,6 +9,8 @@
         width: 500px;
         border: 3px solid #333;
         border-radius: 10px;
+        text-align: center;
+        padding-bottom: 20px;
       }
       .window {
         display: flex;
@@ -16,6 +18,32 @@
         text-align: center;
         padding: 20px;
         border-bottom: 2px solid #333;
+      }
+      .window2 {
+        display: flex;
+        justify-content: space-around;
+        text-align: center;
+        padding: 20px;
+      }
+      input {
+        border-radius: 10px;
+        border: 1px solid #ddd;
+        font-size: 20px;
+        padding: 15px;
+      }
+      button {
+        padding: 10px 20px;
+        border: none;
+        font-size: 25px;
+        cursor: pointer;
+      }
+      .inBtn:hover {
+        background-color: yellowgreen;
+        color: white;
+      }
+      .outBtn:hover {
+        background-color: orangered;
+        color: white;
       }
     </style>
   </head>
@@ -27,12 +55,44 @@
         <div class="dp">원</div>
       </div>
       <div class="window2">
-        <label>금액 : </label>
+        <label for="amount">금액 : </label>
         <input type="text" id="amount" />
         <span> 원</span>
       </div>
       <button class="inBtn" onclick="입금()">입금</button>
       <button class="outBtn" onclick="출금()">출금</button>
     </div>
+    <script>
+      const output = document.getElementById("output");
+      const amount = document.getElementById("amount");
+
+      let balance = 1000000;
+      output.innerText = balance;
+
+      function 입금() {
+        balance += Number(amount.value);
+        output.innerText = balance;
+        amount.value = "";
+      }
+
+      function 출금() {
+        const passwordCheck = prompt("비밀번호를 입력하세요");
+        const pw = "1234!";
+        let input = amount.value;
+        if (input == 0) {
+          alert("금액을 입력해주세요");
+        } else if (input > balance) {
+          alert("잔액이 부족하여 출금할 수 없습니다.");
+          amount.value = "";
+        } else if (passwordCheck == pw) {
+          balance -= Number(amount.value);
+          output.innerText = balance;
+          amount.value = "";
+          alert("출금이 완료되었습니다.");
+        } else {
+          alert("비밀번호가 일치하지 않습니다.");
+        }
+      }
+    </script>
   </body>
 </html>

@@ -56,3 +56,15 @@ function check4() {
   alert(결과);
   // 지역변수는 지역 종료후 초기화
 }
+
+function while5() {
+  let n = 5;
+  while (n <= 20) {
+    console.log(n);
+    n++;
+
+    if (n == 15) {
+      break;
+    }
+  }
+}

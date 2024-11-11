@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>나이 조회하기</title>
+  </head>
+  <body>
+    <h1>나이 확인하기</h1>
+    <input type="number" id="inputAge" placeholder="나이를 입력하세요." />
+    <button onclick="checkAge()">확인</button>
+    <p id="result"></p>
+    <script>
+      /*
+        나이 확인버튼을 눌렀을 때
+        1차 if 문으로 나이를 입력했으면 18세 13세확인
+            2차 if 문으로 18세 이상인경우 성인,
+            13세 이상인경우 청소년입니다. 제한이 있을 수 잇습니다.
+            나머지는 어린이 입니다. 보호자의 동의가 필요합니다.
+            else 문으로 나이를 입력하지 않으면 나이를 입력해주세요. 라는 표기가 p태그에 보이기
+            */
+      const age18 = "성인입니다.";
+      const age13 = "청소년입니다. 제한이 있을 수 있습니다.";
+      const ageCh = "어린이 입니다. 보호자의 동의가 필요합니다.";
+      const inputIncorrect = "나이를 입력해주세요.";
+
+      function checkAge() {
+        const age = document.getElementById("inputAge").value;
+        const result = document.getElementById("result");
+
+        if (age <= 0) {
+          result.innerText = inputIncorrect;
+        } else {
+          if (age >= 18) {
+            result.innerText = age18;
+          } else if (age >= 13) {
+            result.innerText = age13;
+          } else {
+            result.innerText = ageCh;
+          }
+        }
+      }
+    </script>
+  </body>
+</html>

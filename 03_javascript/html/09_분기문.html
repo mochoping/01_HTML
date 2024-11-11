@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>분기문</title>
+  </head>
+  <h1>분기문</h1>
+  <pre>
+        -반복문 수행중 반복을 멈추거나 넘어가는 구문
+
+        -break : (가장 가까운 / 감싸고 있는) 반복문을 멈춤
+
+        -continue : (가장 가까운 / 감싸고 있는) 반복문의 시작 부분으로 
+                    -> 다음 반복으로 넘어감
+        
+        
+    </pre
+  >
+
+  <button onclick="check1()">확인하기1</button>
+  <button onclick="check2()">확인하기2</button>
+  <button onclick="check3()">확인하기3</button>
+  <button onclick="check4()">확인하기4</button>
+  <button onclick="check5()">확인하기5</button>
+
+  <hr />
+
+  <h1>중첩 반복문(2중 for문)</h1>
+  <pre>
+    -반복문 내부에 또 반복문이 작성된 형태
+
+    [작성법]
+    for(초기식1; 조건식1; 증감식1){
+        // 내부에 있는 for문은 초기식 1이 true 일때 실행
+        for(초기식2; 조건식2; 증감식2){
+            초기식1과 초기식 2가 true 일때 실행
+        }
+    }
+
+    메모리 소모량이 많아 가급적 사용 자제. 다른좋은방법이 있다고 함
+</pre
+  >
+  <h1>while 문</h1>
+  <pre>
+    - 끝이 정확하게 정해져 있지 않은 반복에서 주로 사용
+    (ex: 어떤 값이 입력되기 전 까지 반복)
+
+    [작성법]
+
+    while(조건식){
+        조건식이 true 일 경우 수행할 코드;
+    }
+    - 조건식이 true 인 경우 내부 코드를 1회 반복 후 다시 조건식 검사 진행
+    -> false 가 나올 때 까지 무한 반복
+
+</pre
+  >
+  <button onclick="while1()">while 버튼 1</button>
+  <button onclick="while2()">while 버튼 2</button>
+  <button onclick="while3()">while 버튼 3</button>
+  <button onclick="while4()">while 버튼 4</button>
+  <button onclick="while5()">while 버튼 5</button>
+
+  <hr />
+
+  <h1>up / down 게임</h1>
+  <pre>
+        1부터 100사이 난수를 몇회만에 맞추는지 카운트 하는 게임
+    </pre
+  >
+  <button onclick="starGame()">게임시작</button>
+
+  <script src="../js/09_분기문.js"></script>
+
+  <body></body>
+</html>
