@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>회원가입</title>
+    <style></style>
+  </head>
+  <body>
+    <h1>회원가입</h1>
+    <form accept="회원가입성공.html">
+      <label for="inputId">아이디</label>
+      <input type="text" id="inputId" />
+      <label for="inputPw">비밀번호</label>
+      <input type="password" id="inputPw" />
+      <label for="inputTn">전화번호</label>
+      <input type="text" id="inputTn" />
+      <label for="inputPn">휴대전화번호</label>
+      <input type="password" id="inputPn" />
+      <div id="fillUp"></div>
+      <button onclick="checkNumer()">회원가입하기</button>
+    </form>
+    <script>
+      const inputId = document.getElementById("inputId");
+      const inputPw = document.getElementById("inputPw");
+      const fillUp = document.getElementById("fillUp");
+      function checkNumer() {
+        if (inputTn == 0 && inputPn == 0) {
+          fillUp.innerText =
+            "회원가입시, 전화번호나 휴대폰번호중 하나이상 작성하셔야 합니다.";
+        }
+      }
+    </script>
+  </body>
+</html>

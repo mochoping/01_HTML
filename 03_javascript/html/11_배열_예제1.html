@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>배열 실습 1번</title>
+    <style>
+      button {
+        border: none;
+        padding: 10px 20px;
+        font-size: 20px;
+        border-radius: 10px;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>for 문을 활용해서 배열 실습하기</h1>
+    <pre>
+
+
+        -> index 를 다루거나 지정하기 위한 구문을 for문으로 작성가능
+    </pre>
+    <button onclick="check()">배열 X for문 1번</button>
+
+    <h2 id="result"></h2>
+    <script>
+      //for 문을 활용하여 배열 요소 초기화하기
+      //-배열요소 == 배열의 각 칸
+      //- 초기화 : 변수 / 배열 요소에 처음으로 값을 대입하는것
+      function check() {
+        const arr1 = [];
+        arr1[0] = "김밥";
+        arr1[1] = "떡볶이";
+        arr1[2] = "라면";
+        arr1[3] = "볶음밥";
+
+        //for 활용 전체 출력
+        document.getElementById("result").innerText = arr1;
+        // 하나씩 넣어서 쓰지는 않는다.
+        //DB 공부시 다시 나타난다.
+        // 100명정도 추첨은 가능, 이후는 느려서 딴거 쓰는게 좋음
+        for (let n = 0; n <= 3; n++) {
+          alert(arr1[n]);
+        }
+      }
+    </script>
+  </body>
+</html>
