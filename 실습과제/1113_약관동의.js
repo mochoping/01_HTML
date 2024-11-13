@@ -3,12 +3,13 @@ function selectCheck() {
   const agreement = document.getElementsByName("약관동의");
   const result = document.getElementById("name-div");
   let count = 0;
-  let check = 0;
   let total = " ";
-  /*  for( let i = 0; i < agreement.length; i++) {
-        if(agreement[i].checked)
+ for( let i = 0; i < agreement.length; i++) {
+        if(!agreement[i].checked){
+          alert("필수 입력 사항입니다.")
+        }
     }
-*/
+
 
   for (let n = 0; n < hobby.length; n++) {
     if (hobby[n].checked) {
