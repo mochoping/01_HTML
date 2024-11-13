@@ -6,7 +6,8 @@ function selectCheck() {
   let total = " ";
  for( let i = 0; i < agreement.length; i++) {
         if(!agreement[i].checked){
-          alert("필수 입력 사항입니다.")
+          alert("모든 필수 약관에 동의해주세요.")
+          return;
         }
     }
 
