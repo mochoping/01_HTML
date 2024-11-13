@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>태그중에서 body 태그만 확인하기</title>
+  </head>
+  <body>
+    <h1>body 태그 배경색 변경하기</h1>
+    <button onclick="bdBtn()">바디색변경</button>
+    <script>
+      function bdBtn() {
+        /*
+        자바스크립트 입장에서는 
+        getElementsByTagName
+        요소들을 가져오라고 명령했기 때문에, 해당태그가 다수라고 판단
+        코드안에 태그가 하나가 있다 하더라고 인덱스 를 작성해주어 특정해주어야 함.
+
+
+
+        */
+        const bd = document.getElementsByTagName("body");
+        bd[0].style.backgroundColor = "lightblue";
+        //const bd = document.getElementsByTagName("body")[0];
+        //bd.style.backgroundColor = "lightblue";
+        //body같은 태그는 태그명으로도 진행가능
+        document.body.style.backgroundColor = "orange";
+      }
+    </script>
+  </body>
+</html>
