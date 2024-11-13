@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>요소접근</title>
+    <link rel="stylesheet" href="1113_실습과제.css" />
+  </head>
+  <body>
+    <h1 id="title">안녕하세요, 반가워요!</h1>
+    <button onclick="titleColor()">제목 색상 변경</button>
+    <hr />
+
+    <h2 class="text">텍스트1</h2>
+    <h2 class="text">텍스트2</h2>
+    <h2 class="text">텍스트3</h2>
+    <button onclick="textHighlight()">텍스트 강조</button>
+
+    <label>이름을 입력하세요:</label>
+    <input
+      type="text"
+      name="userName"
+      id="a"
+      placeholder="이름을 입력하세요."
+    />
+    <button onclick="Name()">이름 표시</button>
+    <p>당신의 이름: <span id="nameOutput"></span></p>
+    <script src="1113_실습과제.js"></script>
+  </body>
+</html>

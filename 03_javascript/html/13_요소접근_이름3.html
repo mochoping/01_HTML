@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Radio input 선택 확인</title>
+    <link rel="stylesheet" href="../css/13_요소접근_이름3.css" />
+  </head>
+  <body>
+    <h1>좋아하는 색상을 선택하세요.</h1>
+    <div class="container">
+      <!-- 
+        required : name 그룹에 묶인 input들중 최소 하나 선택이 진행되지 않으면 페이지 넘어감을 막음.
+        checked : 강제로 처음부터 같은 분류 name 에서 하나의 값을 선택한 상황에 있도록 설정하는것.
+         -->
+      <input type="radio" name="색상" id="red" value="빨강" required />
+      <label for="red">빨강</label>
+      <input type="radio" name="색상" id="green" value="초록" checked />
+      <label for="green">초록</label>
+      <input type="radio" name="색상" id="blue" value="파랑" />
+      <label for="blue">파랑</label>
+      <input type="radio" name="색상" id="yellow" value="노랑" />
+      <label for="yellow">노랑</label>
+    </div>
+    <button onclick="checkColor()">색상 선택</button>
+    <p id="result"></p>
+
+    <script>
+      function checkColor() {
+        const selectColor = document.querySelector(
+          `input[name="색상"]:checked`
+        );
+
+        //  const colors = document.getElementsByName("색상");
+        // input checkbox 는 for 문을 사용해서 사용자가 몇개를 체크 했는지 확인하지만,
+        // input radio 는 여러가지 선택지 중에 하나만 선택하여 값을 전달하기 때문에
+        // for 문이 필요없음.
+        //  document.getElementById("result").innerText = colors.value;
+        document.getElementById("result").innerText = selectColor.value;
+      }
+    </script>
+  </body>
+</html>

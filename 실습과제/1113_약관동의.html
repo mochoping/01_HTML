@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="1113_약관동의.css" />
+  </head>
+  <body>
+    <div id="terms-form">
+      <h2>회원가입 약관 및 취미 선택</h2>
+
+      <input type="checkbox" name="약관동의" id="survice" value="1" />
+      <label for="survice">서비스 이용 약관 동의</label><br />
+
+      <input type="checkbox" name="약관동의" id="personalInfo" value="2" />
+      <label for="personalInfo">개인정보 수집 및 이용 동의</label><br />
+
+      <input type="checkbox" name="약관동의" id="marketing" value="3" />
+      <label for="marketing">마케팅 정보 수신 동의 (선택)</label>
+
+      <h3>취미 선택</h3>
+
+      <input type="checkbox" name="취미" id="book" value="독서" />
+      <label for="book">독서</label><br />
+
+      <input type="checkbox" name="취미" id="sport" value="운동" />
+      <label for="sport">운동</label><br />
+
+      <input type="checkbox" name="취미" id="cook" value="요리" />
+      <label for="cook">요리</label><br />
+
+      <input type="checkbox" name="취미" id="trip" value="여행" />
+      <label for="trip">여행</label><br />
+      <button onclick="selectCheck()">확인하기</button>
+      <div id="name-div"></div>
+    </div>
+    <script src="1113_약관동의.js"></script>
+  </body>
+</html>
