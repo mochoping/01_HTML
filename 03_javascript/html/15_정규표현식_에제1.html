@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>이름 형식 검사</title>
+    <style>
+      .good {
+        color: green;
+      }
+      .bad {
+        color: red;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>이름 형식 검사</h1>
+    <p>이름을 입력하세요. (2~5자 한글)</p>
+    <input type="text" id="nameInput" />
+    <button onclick="checkname()">확인</button>
+    <p id="result"></p>
+
+    <script>
+      function checkName() {
+        const inputName = document.getElementById("nameInput");
+        const result = document.getElementById("result");
+        //                   /^ = 시작   $/; = 끝
+        const nameRegex = /^[가-힣]{2.5}$/; //2~5자만 가능
+
+        //이름 글자수 2-5제한
+
+        if (nameRegex.test(inputName)) {
+          result.innerText = "유효한 형식의 이름입니다.";
+        } else {
+          result.innerText =
+            "이름 형식이 유효하지 않습니다. 한글만 작성 가능합니다.";
+        }
+      }
+    </script>
+
+    <h3>입력받은 값이 휴대전화가 맞는지 확인</h3>
+    <pre>
+        - 기호 제외하고 핸드폰 번호가 10~11이어야 함
+        -유효한 경우 :초록글씨로 유효한 번호 형식입니다.
+        - 아닌경우 번호가 유효하지 않습니다. 줄바꿈 숫자만 입력가능합니다. 010 부터 입력주세요.
+    </pre>
+    <input type="text" id="inputphone" />
+
+    <button onclick="checkPhone()">휴대폰 번호확인</button>
+    <div if="phoneResult"></div>
+    <script>
+      function checkPhone() {
+        const iP = document.getElementById("inputphone").value;
+        const pR = document.getElementById("phoneResult");
+        const pR1 = /^[0-9]{10.11}$/; //숫자 10-11자 /^\d{10,11}$/ \d == [0.9]
+        if (pR1.test(ip)) {
+          pR.innerText = "유효한 번호 형식입니다.";
+          pR.className = "good";
+        } else {
+          pR.innerHTML =
+            "번호 형식이 올바르지 않습니다. <br> 숫자 10-11자리 입력해주세요.";
+          pR.className = "bad";
+        }
+      }
+
+      /*function checkPhone() {
+        const inputPhone = document.getElementById("inputphone").value;;
+        const phoneresult = document.getElementById("phoneResult");
+        const phoneRegex = /^[0-9]{11.12}$/;
+
+        if (phoneRegex.test(inputPhone)) {
+          phoneresult.innerText = "유효한 번호 형식입니다.";
+        } else if (inputPhone.value.trim().length == 0) {
+          alert("번호를 입력해주세요.");
+          return; 
+        } else {
+          phoneresult.innerText = "번호가 유효하지 않습니다.";
+        }
+      }*/
+    </script>
+    <hr />
+    <h3>입력받은 값이 휴대전화 번호가 맞는지 확인</h3>
+    <pre>
+        "-" 하이픈 기호제외 시키는 법
+
+        변수명.replace(변경할 문자, 변경될 문자);
+    </pre>
+    휴대폰번호 : <input type="text" id="mobilePhone" />
+    <button onclick="checkMobile()">번호 확인</button>
+    <p id="mobileResult"></p>
+    <script>
+      function checkMobile() {
+        const mobilePhone = document.getElementById("mobilePhone").value;
+        const mobileResult = document.getElementById("mobileResult");
+        // input에 작성된 값이 없을 때 입력한 값이 없습니다.
+        if (mobilePhone.trim().length == 0) {
+          mobileResult.innerText = "입력한 번호가 없습니다.";
+          return;
+        }
+        //하이픈제거 /g global
+        // 특정 단어나 문구를 없애기위해 ""많이 사용
+        const cleanNumber = mobilePhone.replace(/-/g, "");
+
+        const mobileRegExp = /^[0-9]{10,11}$/;
+
+        if (mobileRegExp.test(cleanNumber)) {
+          mobileResult.innerText = "유효한 형식입니다.";
+        } else {
+          mobileResult.innerText = "유효한 형식이 아닙니다.";
+        }
+      }
+    </script>
+  </body>
+</html>
