@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>입력된 키 확인 Enter</title>
+    <style>
+      #inputBox {
+        width: 300px;
+        padding: 10px;
+        font-size: 20px;
+      }
+      #mgs {
+        font-size: 20px;
+        color: orange;
+        margin-top: 20px;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Enter 키를 입력했을 때 입력한 값 화면에 보여주기</h1>
+    <p>입력 창에서 Enter 키를 눌러보세요.</p>
+    <input
+      type="text"
+      id="inputBox"
+      placeholder="Enter를 눌러보세요/"
+      onkeydown="handleKeyDown(event)"
+      onkeyup="hadleKeyUp(event)"
+    />
+
+    <!-- enter키를 입력했을 때 메세지가 보여질 공간 생성하기-->
+    <div id="mgs"></div>
+    <script>
+      // 키를 밑으로 눌렀을 때 기능
+      // 키를 밑으로 누르는 것을 종료 했을 때 기능
+
+      function handleKeyDown(event) {
+        //console.log( "키가누르는것을 개발자가 확인하는 창에서 확인을 하는고로 정확한 확인이 필요하여");
+      }
+      function hadleKeyUp(event) {
+        //console.log("누르기 종료 확인하는것을 개발자 콘솔을 통해 확인하여 프로그래밍 하는중");
+        // 엔터시 메세지 표시
+        if (event.key === "Enter") {
+          document.getElementById("mgs").innerHTML += "안녕하심?<br>";
+          //``는 안에 변수명과 문자열을 함께 사용할때 표기
+          // 문자열 = 문자들이 나열된 것 글자가 1글자 이상은 문자열
+          //사용시 문자열 변수명과 함께 `문자열 ${변수명}`
+        }
+      }
+    </script>
+  </body>
+</html>
