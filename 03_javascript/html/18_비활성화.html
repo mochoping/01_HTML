@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>비활성화</title>
+    <style>
+      button {
+        padding: 10px 20px;
+        font-size: 20px;
+        cursor: pointer;
+        border: none;
+        border-radius: 10px;
+      }
+      button:disabled {
+        background-color: gainsboro;
+        cursor: not-allowed;
+      }
+      button:hover {
+        background-color: red;
+        color: white;
+      }
+    </style>
+  </head>
+  <body>
+    <button id="myButton" disabled>클릭할수있다면</button>
+    <br /><br />
+    <button onclick="활성화()">버튼활성화</button>
+    <button onclick="비활성화()">버튼비활성화</button>
+
+    <script>
+      function 활성화() {
+        document.getElementById("myButton").disabled = false;
+      }
+      function 비활성화() {
+        document.getElementById("myButton").disabled = true;
+      }
+      // 약관 미동의시 회원가입 버튼 비활성화에 사용
+    </script>
+  </body>
+</html>
