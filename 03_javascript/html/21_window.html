@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>window 내장 객체</title>
+  </head>
+  <body>
+    <h1>window 내장 객체</h1>
+    <pre>
+    - 인터넷 창 자체를 나타내는 객체
+
+    -자바스크립트 모든 기능에서 가장 최우선
+
+    -window의 자식 개체
+    1)DOM(Document Object Model : document)
+        (브라우저에서 내용(페이지 출력 부분))
+    </pre>
+    <hr />
+    <h3>윈도우의 기능임을 생략해도 되는 기능</h3>
+    <pre>
+        생략가능
+        (window.)alert("글자")
+        (window.)prompt("글자")
+        (window.)setTimeout(함수, 지연시간)
+        
+    </pre>
+    <h3>앞에 윈도우 붙여줘야 하는 기능들</h3>
+    <pre>
+        window.location.href = "이동할.html"
+        window 생략 가능하지만, 상황에 따라 파일을 가져오는 위치가 변경될 수 있기 때문에
+        명확한 위치를 표기하기 위해서 window를 붙여주는것이 좋음
+
+        location = 위치 지역
+        미국 3.XXXXX
+        한국 121.XXXXX
+        중국 36.XXXXX
+
+        window = 내컴퓨터
+        location = 내가 현재 머물고 있는 페이지(html 파일)을 기준으로
+        href   = 주소를 가져와라
+
+
+    </pre>
+
+    <h6>href 와 src 차이</h6>
+    <pre>
+        링크나 리소스 참조할 때 사용하지만 사용 용도가 다름
+
+        [href] = 페이지 이동이나 기능을 참조할때 사용
+                css파일, 페이지 간 이동, 외부 웹페이지 링크
+        [src]  = 페이지 안에 이미지, 동영상, js 파일 등 외부 소스를 삽입할 때 사용
+
+
+    </pre>
+  </body>
+</html>

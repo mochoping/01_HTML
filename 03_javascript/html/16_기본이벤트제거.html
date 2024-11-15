@@ -42,5 +42,21 @@
       입력 : <input type="text" id="inputTest" />
       <button type="button" id="btn">제출하기</button>
     </form>
+    <script>
+      const btn = document.getElementById("btn");
+      const inputTest = document.getElementById("inputTest");
+      btn.addEventListener("click", () => {
+        const vle = inputTest.value; //값이 있으면 true
+        if (!vle) {
+          alert("입력란에 값을 입력해주세요.");
+        }
+      });
+      // function(){}   =     ()=>{} 축약표현 익명함수
+      /*
+      function 기능명 생략 (매개변수) {실행문장들}
+
+      기능자체표현을 생략 (매개변수) => {실행문장들}
+      */
+    </script>
   </body>
 </html>
