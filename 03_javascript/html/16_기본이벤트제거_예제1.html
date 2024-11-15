@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>약관동의</title>
+    <link rel="stylesheet" href="../css/16_기본이벤트제거_예제1.css" />
+  </head>
+  <body>
+    <!--약관 동의를 활용해서 모든 약관을 동의했을 경우 
+    회원가입 버튼 활성화
+    -->
+    <div class="container">
+      <h1>약관동의</h1>
+      <input type="checkbox" id="약관동의1" />
+      <label for="필수약관동의1">약관동의1</label><br />
+      <input type="checkbox" id="약관동의2" />
+      <label for="필수약관동의2">약관동의2</label><br />
+      <input type="checkbox" id="약관동의3" />
+      <label for="필수약관동의3">약관동의3</label><br />
+      <button onclick="제출(event)">회원가입</button>
+    </div>
+    <script>
+      function 제출(event) {
+        event.preventDefault();
+      }
+    </script>
+  </body>
+</html>
